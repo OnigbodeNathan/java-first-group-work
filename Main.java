@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 from Physics.java import *;
 import java.util.Scanner;
 public class Main {
@@ -8,6 +9,7 @@ public class Main {
         System.out.println("3 for velocity");
         System.out.println("4 for momentum");
         System.out.println("5 for pressure");
+        try{
         Scanner input = new Scanner(System.in);
         int insert = input.nextInt();
         switch (insert){
@@ -53,7 +55,10 @@ public class Main {
                 System.out.println("Enter the area");
                 area = input.nextFloat();   
                 return pressure;
-               
-                  
+           } 
+        catch(InputMismatchException ime){
+             System.out.println("input in numbers")
+                 
+        }              
     }
 }
